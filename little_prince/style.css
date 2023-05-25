@@ -1,0 +1,435 @@
+@import url('htttps://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+:root{
+    --bg-clr: #0b3035;
+    --bg-clr-gr:#cfdadb;
+    --bg-lighter: #587d81;
+    --bg-darker: #082326;
+    --text-clr: #fff;
+ 
+    --ft-Logo: 2em;
+    --ft-title: 3.5em;
+    --ft-title-small: 2em;
+
+    --ft-small: 1em;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.container{
+    min-height: 100%;
+    min-height: 100svh;
+    overflow-y: hidden;
+}
+
+body{
+    min-height: 100%;
+    min-height: 100svh;
+    background: linear-gradient(var(--bg-clr), var(--bg-clr-gr));
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+    z-index: 3;
+}
+
+header .logo{
+    position: absolute;
+    user-select: none;
+    aspect-ratio: 1000 / 755;
+    width: 9em;
+    background-image: url('/images/icons/Littleprince_nobg.svg');
+    background-size: cover;
+    /* filter: invert(100%); */
+    left: 6%;
+    transform: translateY(-2.5em);
+}
+
+/* header .logo:hover{
+    background-image: url('/images/icons/Littleprince_nobg.svg');
+} */
+
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: clamp(5px, 15px, 20px);
+    vertical-align: middle;
+    right: 6%;
+}
+
+header ul li{
+    list-style: none;
+    margin-left: clamp(5px, 15px, 20px);
+}
+
+header ul li a{
+    display: inline-block;
+    text-decoration: none;
+    padding: .3em 1em;
+    color: var(--text-clr);
+    border-radius: 20px;
+    line-height: 1;
+}
+
+ion-icon{
+    font-size: 32px;
+}
+ 
+#quote_icon{
+    width: 32px;
+    height: 32px;
+    filter: invert(100%);
+}
+
+header ul li a:hover,
+header ul li a.active,
+header ul li a.active ion-icon{
+    background: var(--text-clr);
+    color: var(--bg-clr);
+}
+
+header ul li a:hover #quote_icon,
+header ul li a.active #quote_icon{
+    filter: invert(16%) sepia(18%) saturate(1750%) hue-rotate(139deg) brightness(86%) contrast(95%);
+}
+
+section{
+    position: relative;
+    min-width: 100%;
+    min-height: 100svh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+section::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+    background: linear-gradient(to top, var(--bg-darker), transparent);
+}
+
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+section .B612{
+    position: absolute;
+    aspect-ratio: 1/1;
+    width: 20em;
+    left: 15%;
+    background-image: url('images/backgrounds/B612/B612_2.png');
+    background-size: cover;
+    filter: brightness(0.8) ;
+}
+
+section .B612:hover{
+    filter: brightness(1);
+}
+
+section img#m_f{
+    z-index: 2;
+}
+
+section .airplane-container{
+    position: absolute;
+    z-index: 3;
+    right: calc(-10vmin - 20em);
+    transform-style: preserve-3d;
+    animation: airplane_intro 7s forwards;
+    animation-timing-function: ease-in;
+}
+
+section #airplane{
+    position: relative;
+    aspect-ratio: 120 / 105;
+    background-image: url('images/components/airplane.png');
+    width: 10em;
+    background-size: cover;
+    filter: brightness(0.8);
+}
+
+section #airplane:hover{
+    filter: brightness(1.5);
+}
+
+section .airplane-container .shadow{
+    z-index: -1;
+    position: absolute;
+    aspect-ratio: 1/1;
+    width: 7em;
+    transform-style: preserve-3d;
+    border-radius: 100%;
+    transform: perspective(1em) rotateX(30deg) scale(1, 0.35);
+    background: var(--bg-darker);
+    filter: blur(2em);
+    animation: airplane-shadow 7s forwards;
+}
+
+@keyframes airplane_intro {
+    to{
+        transform: translate(calc(-130vmin - 20em), calc(11vh + 11em)) rotateZ(-5deg);
+        filter: brightness(1);
+    }
+}
+
+@keyframes airplane_intro_landscape {
+    to{
+        transform: translate(calc(-80vmin - 20em), calc(11vh + 11em)) rotateZ(-5deg);
+        filter: brightness(1);
+    }
+}
+
+@keyframes airplane_intro_middle {
+    to{
+        transform: translate(calc(-80vmin - 20em), calc(11vh + 11em)) rotateZ(-5deg);
+        filter: brightness(1);
+    }
+}
+
+@keyframes airplane_intro_small {
+    to{
+        transform: translate(calc(-62vmin - 20em), calc(19vh + 11em)) rotateZ(-5deg);
+        filter: brightness(1);
+    }
+}
+
+@keyframes airplane_intro_smaller {
+    to{
+        transform: translate(calc(-60vmin - 20em), calc(14vh + 11em)) rotateZ(-5deg);
+        filter: brightness(1);
+    }
+}
+
+@keyframes airplane-shadow{
+    from{
+        opacity: 0.2;
+        transform: perspective(1em) translate(1em, 2.5em) rotateX(50deg) scale(1, 0.6);
+    }
+    to{
+        opacity: 1;
+        transform: perspective(1em) translate(-1em, 2.5em) rotateX(20deg) scale(1, 0.3);
+    }
+}
+
+#text{
+    position: absolute;
+    color: var(--text-clr);
+    right: -10%;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 2;
+    user-select: none;
+}
+
+.btn{
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 30px;
+    line-height: 1;
+    border-radius: 40px;
+    background: var(--text-clr);
+    color: var(--bg-clr);
+    font-size: 1.5em;
+    transform: translateY(100px);
+}
+
+#intro{
+    background: var(--bg-darker);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#intro h2,
+#intro p{
+    padding-left: 5svw;
+    padding-right: 5svw;
+    text-align: center;
+    color: var(--text-clr);
+}
+
+#intro h2{
+    font-size: var(--ft-title);
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#intro p{
+    font-size: var(--ft-small);
+    line-height: 2em;
+}
+
+@media only screen 
+and (min-device-width : 600px){
+
+    section .airplane-container{
+        animation: airplane_intro_middle 7s forwards;
+    }
+
+    section .B612{
+        top: 50px;
+        width: 20em;
+    }
+}
+
+@media only screen 
+and (min-device-width : 300px) 
+and (max-device-width : 600px) 
+and (orientation : portrait){
+    header{
+        min-width: 100svw;
+        vertical-align: middle;
+        top: 3%;
+    }
+
+    header .logo{
+        top: 2%;
+        width: 8em;
+        transform: translateY(-1em);
+        left: 5%;
+    }
+
+    header ul{
+        position: absolute;
+        right: 5%;
+    }
+
+    ion-icon{
+        font-size: 28px;
+    }
+
+    #quote_icon{
+        width: 31.75px;
+        height: 28px;
+        filter: invert(100%);
+    }
+
+    #text{
+        bottom: 20%;
+        right: -20%;
+    }
+    
+    section{
+        overflow-x: hidden;
+    }
+    section::before{
+        height: 60px;
+    }
+    
+    section img#stars{
+        mix-blend-mode: screen;
+    }
+
+    section .B612{
+        top: 200px;
+        left: 5%;
+        width: 12em;
+    }
+
+    section .airplane-container{
+        right: calc(-1vmin - 20em);
+    }
+
+    section #airplane {
+        width: 6em;
+    }
+
+    section .airplane-container .shadow{
+        width: 5em;
+        transform-style: preserve-3d;
+        border-radius: 100%;
+        transform: perspective(1em) rotateX(30deg) scale(1, 0.2);
+    }
+
+    section img{
+        width:100%;
+        max-width:600px;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    #intro h2{
+        font-size: var(--ft-title-small);
+    }
+}
+
+@media only screen 
+and (min-device-width : 300px) 
+and (max-device-width : 400px) 
+and (orientation : portrait){
+    section .airplane-container{
+        animation: airplane_intro_smaller 7s forwards;
+    }
+}
+
+@media only screen 
+and (max-device-width : 1080px) 
+and (orientation : landscape){
+    header {
+        top: 5%;
+    }
+
+    header ul{
+        position: absolute;
+    }
+
+    section .B612{
+        width: 20em;
+    }
+
+    section .airplane-container{
+        right: -20;
+    }
+    section .airplane-container{
+        animation: airplane_intro_landscape 7s forwards;
+    }
+}
+
+@media only screen 
+and (min-device-width : 400px) 
+and (max-device-width : 600px) 
+and (orientation : portrait){
+    section .airplane-container{
+        animation: airplane_intro_small 7s forwards;
+    }
+}
+
+@media only screen 
+and (min-device-width : 600px) 
+and (max-device-width : 1080px) 
+and (orientation : portrait){
+    section .airplane-container{
+        animation: airplane_intro_middle 7s forwards;
+    }
+}

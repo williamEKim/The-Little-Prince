@@ -1,0 +1,231 @@
+@import url('htttps://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+:root{
+    --card1-clr : #009688;
+    --card2-clr : #ff3e7f;
+    --card3-clr : #03a9f4;
+    --card-bg-clr: #fff;
+
+    --btn-clr : rgb(117, 117, 117);
+    --btn-hover-clr : rgb(107, 106, 106);
+
+    --bg-clr : #00bcd4;
+    --bg-clr-mix : #ffeb3b;
+
+    --img-bg : #333;
+    
+    --shadow-clr: rgb(0,0,0);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100%;
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    min-height: 100svh;
+    min-width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: linear-gradient(45deg, var(--bg-clr), var(--bg-clr-mix));
+    gap: 150px 50px;
+    padding: 100px 50px;
+}
+
+.container .card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-width: 350px;
+    min-height: 300px;
+    background: var(--card-bg-clr);
+    border-radius: 20px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+}
+
+.container .card .imgBx{
+    position: absolute;
+    top: 20px;
+    min-width: 300px;
+    min-height: 220px;
+    background: var(--img-bg);
+    border-radius: 12px;
+    transition: 0.5s;
+    background-size: cover;
+}
+
+.container .card .content{
+    bottom: 4%;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    max-width: 300px;
+    height: 2em;
+    transition: 0.5s;
+}
+
+.content .quote-line{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-weight: 400;
+}
+
+.pop-up-cover{
+    visibility: hidden;
+    gap: 2em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 300px;
+    height: 0;
+}
+
+.page-num,
+.from-to{
+    text-align: center;
+    font-weight: 100;
+}
+
+.card-buttons {
+    position: absolute;
+    min-width: 350px;
+    bottom: -31px; /* adjust to half of the button height */
+    left: -25px;
+    display: flex;
+    justify-content: space-between;
+    bottom: -17px;
+    align-items: center;
+}
+
+.card-buttons div {
+    min-height: 61.5px;
+    min-width: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    color: var(--btn-clr);
+    cursor: pointer;
+}
+
+.card-buttons .copy-text{
+    border-radius: 0 0 0 20px;
+    background: var(--img-bg);
+    color: var(--card-bg-clr);
+}
+
+.card-buttons .copy-citation{
+    border-radius: 0 0 20px 0;
+}
+
+/* hover effects */
+:is(.card.active){
+    min-height: 400px;
+}
+
+:is(.card.active) .imgBx{
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+:is(.card.active) .content{
+    height: 260px;
+    row-gap: 1.2em;
+}
+
+:is(.card.active) .quote-line{
+    animation: text-up forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes text-up{
+    to {
+        display: block;
+        -webkit-line-clamp: 10;
+        text-align: center;
+    }
+}
+:is(.card.active) .pop-up-cover{
+    animation: showHidden 1s 0.2s forwards;
+}
+
+@keyframes showHidden{
+    to{
+        visibility: visible;
+        height: 6em;
+    }
+}
+
+:is(.copy-text:hover) {
+    background: var(--btn-hover-clr);
+    color: var(--card-bg-clr);
+}
+
+:is(.copy-citation:hover){
+    background: var(--btn-hover-clr);
+    color: var(--card-bg-clr);
+}
+
+:is(.copy-text.clicked, .copy-citation.clicked) {
+    animation: clickEvt 0.8s linear;
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes clickEvt{
+    25% {
+        scale: 1.1;
+    }
+    50%{
+        scale: 1;
+    }
+    75%{
+        scale: 1.1;
+    }
+}
+
+/* media quaries */
+@media only screen
+and (min-width: 600px) {
+    :is(.card:hover){
+    min-height: 400px;
+    }
+
+    :is(.card:hover) .imgBx{
+        top: -100px;
+        scale: 0.75;
+        box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+    }
+
+    :is(.card:hover) .content{
+        height: 260px;
+        row-gap: 1.2em;
+    }
+
+    :is(.card:hover) .quote-line{
+        animation: text-up forwards;
+        animation-delay: 0.2s;
+    }
+
+    :is(.card:hover) .pop-up-cover{
+        animation: showHidden 1s 0.2s forwards;
+    }
+}

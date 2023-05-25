@@ -1,0 +1,86 @@
+{
+    "And now here is my secret" : {
+        "line" : "And now here is my secret, a very simple secret: It is only with the heart that one can see rightly; what is essential is invisible to the eye.",
+        "page" : "48",
+        "from" : "the fox",
+        "to" : "the little prince",
+        "img"  : "https://cdn.pixabay.com/photo/2021/12/29/20/22/child-6902674_1280.png"
+    },
+    "All grown-ups were once children" : {
+        "line" : "All grown-ups were once children... but only few of them remember it.",
+        "page": "3",
+        "from" : "Antoine de Saint Exupéry",
+        "to" : "Leon Werth when he was a little boy",
+        "img"  : "https://live.staticflickr.com/107/268634682_f83d329609_z.jpg"
+    },
+    "It is the time you have wasted for your rose" : {
+        "line" : "It is the time you have wasted for your rose that makes your rose so important.",
+        "page": "48",
+        "from" : "the fox",
+        "to" : "the little prince",
+        "img"  : "https://live.staticflickr.com/5232/6939217250_f521f1466d_b.jpg"
+    },
+    "What makes the desert beautiful" : {
+        "line" : "'What makes the desert beautiful,' said the little prince, 'is that somewhere it hides a well...'",
+        "page": "52",
+        "from" : "the little prince",
+        "to" : "The Narrator, a lonely pilot",
+        "img"  : "https://p1.pxfuel.com/preview/430/643/649/the-little-prince-cake-figurine-world-blue-one.jpg"
+    },
+    "One only understands the things that one tames" : {
+        "line" : "'One only understands the things that one tames,' said the fox. 'Men have no more time to understand anything... and so men have no friends any more. \nIf you want a friend, tame me ...'",
+        "page": "47",
+        "from" : "the fox",
+        "to" : "the little prince",
+        "img"  : "https://i.postimg.cc/BQ2W9bwF/the-little-prince-5235474-1280.jpg"
+    },
+    "So the little prince tamed the fox." : {
+        "line" : "So the little prince tamed the fox. And when the hour of his departure drew near-- \n'Ah,' said the fox, 'I shall cry.'",
+        "page": "47",
+        "from" : "the fox",
+        "to" : "the little prince",
+        "img"  : "https://i.postimg.cc/JzfwXmXm/little-prince-7244103-1280-1.png"
+    },
+    "I never wished you any sort of harm; but you wanted me to tame you ..." : {
+        "line" : "'It is your own fault,' said the little prince. 'I never wished you any sort of harm; but you wanted me to tame you...' \n",
+        "page": "48",
+        "from" : "little prince",
+        "to" : "the fox",
+        "img"  : "https://i.postimg.cc/vH4sqFLT/Der-Kleine-Prinz-1.jpg"
+    },
+    "What is essential is invisible to the eye" : {
+        "line" : "'What is essential is invisible to the eye,' the little prince repeated, so that he would be sure to remember.",
+        "page": "48",
+        "from" : "the little prince",
+        "to" : "the little prince",
+        "img"  : "https://live.staticflickr.com/65535/40812831233_d47d901248_z.jpg"
+    },
+    "Well, I must endure the presence of two or three caterpillars" : {
+        "line" : "Well, I must endure the presence of two or three caterpillars if I wish to become acquainted with the butterflies.",
+        "page": "22",
+        "from" : "the flower",
+        "to" : "the little prince",
+        "img"  : "https://upload.wikimedia.org/wikipedia/commons/c/c8/Little_Prince_2_%2861520821%29.jpeg"
+    },
+    "You are beautiful, but you are empty" : {
+        "line" : "'You are not at all like my rose,' he said. 'As yet you are nothing. No one has tamed you, and you have tamed no one' ... You are beautiful, but you are empty.",
+        "page": "48",
+        "from" : "the little prince",
+        "to" : "roses",
+        "img"  : "https://live.staticflickr.com/5759/23600520756_70329c262d_b.jpg"
+    },
+    "But in herself alone she is more important than all the hundreds of you other roses" : {
+        "line" : "One could not die for you ... an ordinary passerby would think that my rose looked just like you... But in herself alone she is more important than all the hundreds of you other roses.",
+        "page": "48",
+        "from" : "the little prince",
+        "to" : "roses",
+        "img"  : "https://live.staticflickr.com/5035/6949549858_13c332475c_b.jpg"
+    },
+    "" : {
+        "line" : "",
+        "page": "",
+        "from" : "",
+        "to" : "the little prince",
+        "img"  : ""
+    }
+}
